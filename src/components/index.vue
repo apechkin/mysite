@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <div class="conteiner">
+    <div class="container">
+      <header-layout />
       <div class="content">
-        <header-layout />
         <router-view/>
       </div>
-    </div>
-    <div class="side">
-      Side
-    </div>
-    <div class="footer">
-      Footer
+      <div class="side">
+        Side
+      </div>
+      <div class="footer">
+        Footer
+      </div>
     </div>
   </div>
 </template>

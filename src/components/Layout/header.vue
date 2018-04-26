@@ -1,13 +1,17 @@
 <template lang="html">
   <div class="header">
-    <ul v-for="(element, index) in header"  :key="index">
-      <li>{{element.toUpperCase()}}</li>
-    </ul>
+    <div class="logo">
+      This is logo
+    </div>
+    <div class="menu">
+      <ul v-for="(element, index) in header"  :key="index">
+        <li><a href="#" class="menu-link" />{{element.toUpperCase()}}</li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
-import _ from 'lodash'
 export default {
   name: 'Header',
   data () {
@@ -21,9 +25,24 @@ export default {
 <style lang="less">
 .header {
   display: flex;
-  width: 1176px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 60%;
+  height: 20vh;
+  border: 2px solid red;
+  align-items: center;
 }
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60%;
+  ul {
+    list-style: none;
+    color: #00796B;
+    li:hover {
+      color: #E0F2F1
+    }
+  }
+}
+
 </style>
